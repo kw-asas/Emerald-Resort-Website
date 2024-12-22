@@ -1,0 +1,871 @@
+/* General Reset and Styling */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Homepage Section Styling */
+.homepage-section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden; /* Ensures content stays within the section */
+}
+
+.homepage-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Background Video Styling */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Places the video behind all other content */
+}
+
+/* Header and Navigation Bar Styling */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #212121;
+    transition: background-color 0.9s ease;
+    z-index: 99;
+}
+
+/* Navigation Logo Styling */
+.nav-logo img {
+    width: 200px;
+    height: 200px;
+    /* opacity: 0; /* Start invisible */
+    transition: opacity 0.5s ease; /* Smooth transition */
+}
+
+.nav-logo img.visible {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Navigation Menu Styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    padding: 0px 50px;
+    color: #f8f8f8;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu li a {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Book Button Styling */
+.nav-book-button {
+    padding: 10px 50px 10px 50px;
+    border: 5px solid #F8F8F8;
+    color: #F8F8F8;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Homepage Title and Subtitle Styling */
+.homepage-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.homepage-title h1 {
+    font-size: 85px;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.homepage-title p {
+    font-size: 21px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Side Navigation Panel Styling */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* About Us Section Styling */
+.about-us-section {
+    justify-content: flex-end;
+    overflow: hidden;
+    /* Debug 
+    border: 10px solid orange; */
+}
+
+.about-us-header h2 {
+    width: 620px;
+    height: 200px;
+    flex-shrink: 0;
+
+    font-size: 57px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+
+    background: linear-gradient(180deg, #33E28C 19%, #4F94D9 82%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Debug 
+    border: dotted orange;*/ 
+}
+
+.about-us-paragraph p {
+    width: 588px;
+    color: #4E544D;
+    font-size: 18px;
+    font-style: italic;
+    /* Debug 
+    border: 6px dotted orange; */ 
+}
+
+.about-us-text-content {
+    position: relative;
+    width: 520px;
+    height: 300px;
+    top: 70px;
+    left: 20px;
+    /* Debug
+    border: 6px solid orange; */ 
+}
+
+  /* Overlaps Images */
+  .about-us-image-stack {
+    position: relative; /* Allows child elements to be positioned relatively to this container */
+    width: 50%; /* Set container width */
+    height: 700px; /* Adjust container height */
+    left: 480px;
+    bottom: 300px;
+    /* Debug 
+    border: 5px dotted blue; */ 
+  }
+
+    .image-stack__item {
+        position: absolute; /* Position images relative to the container */
+        transition: 0.3s ease; /* Smooth resizing and repositioning effect */
+    }
+    
+    .image-stack__item--top {
+        top: 400px; /* Adjust vertical position */
+        left: -120px; /* Adjust horizontal position */
+        z-index: 2; /* Ensure it's on top of the bottom image */
+    }
+    
+    .image-stack__item--bottom {
+        top: 1px; /* Adjust vertical position */
+        left: 160px; /* Adjust horizontal position */
+        z-index: 1; /* Ensure it is below the top image */
+    }
+    
+    .image-stack__item--top img {
+        width: 500px;
+        height: 490px;
+        border-radius: 31px;
+    }
+
+    .image-stack__item--bottom img {
+        width: 550px;
+        height: 620px;
+        border-radius: 9.5%;
+    } 
+
+  .make-a-booking {
+    top: 70px; /* Adjust vertical position */
+    left: 680px; /* Adjust horizontal position */
+    z-index: 1; /* Ensure it is top of the top image */
+    position: absolute; /* Ensure positioning works as intended */
+    padding: 65px 15px 65px 15px;
+    background: linear-gradient(180deg, #3EE090 0%, #38D 100%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 35px;
+    color: #F8F8F8;
+  }
+
+  .rectangle-bar {
+    position: absolute; /* Ensures top and left work */
+    top: 140px; /* Adjust vertical position */
+    left: 260px; /* Adjust horizontal position */
+    z-index: 0; /* Stacking order */
+  
+    width: 520px; /* Width of the rectangle */
+    height: 550px; /* Height of the rectangle */
+    flex-shrink: 0; /* Prevents shrinking in a flex container */
+  
+    border-radius: 10%; /* Rounded corners */
+    border: 5px solid #3EE090; /* Green border */
+  }
+  
+
+  /* Room Page Styling */
+.room-section {
+    height: 1100px;
+    justify-content: flex-end;
+    /* Debug 
+    border: 3px solid yellow; */
+  }
+
+/* Overlaps Images */
+.room-image-stack {
+    position: relative; /* Allows child elements to be positioned relative to this container */
+    width: 50%; /* Set container width */
+    height: 1000px; /* Adjust container height */
+    /* Debug 
+    border: 4px solid red; */
+}
+
+.room-image-stack__item {
+    position: absolute; /* Position images relative to the container */
+    transition: 0.3s ease; /* Smooth resizing and repositioning effect */
+    /* Debug 
+    border: 4px solid orange; */
+}
+
+.room-image-stack__item--top {
+    top: 370px; /* Adjust vertical position */
+    left: 490px; /* Adjust horizontal position */
+    z-index: 2; /* Ensure it's on top of the bottom image */
+}
+
+.room-image-stack__item--bottom {
+    top: 0px; /* Adjust vertical position */
+    left: 90px; /* Adjust horizontal position */
+    z-index: 1; /* Ensure it is below the top image */
+}
+
+.room-image-stack__item--top img {
+    width: 730px;
+    height: 420px;
+    border-radius: 9%;
+}
+
+.room-image-stack__item--bottom img {
+    width: 600px;
+    height: 720px;
+    border-radius: 9.5%;
+}
+
+.explore {
+    top: -26px; /* Adjust vertical position */
+    left: 340px; /* Adjust horizontal position */
+    z-index: 3; /* Ensure it is above all images */
+    position: absolute; /* Ensure positioning works as intended */
+    padding: 12px 45px 12px 45px;
+    background: linear-gradient(180deg, #3EE090 0%, #38D 100%);
+    text-decoration: none;
+    font-size: 40px;
+    color: #F8F8F8;
+}
+
+.room-rectangle-bar {
+    position: absolute; /* Ensures top and left work */
+    top: 220px; /* Adjust vertical position */
+    left: 30px; /* Adjust horizontal position */
+    z-index: 0; /* Stacking order */
+    width: 537px; /* Width of the rectangle */
+    height: 550px; /* Height of the rectangle */
+    flex-shrink: 0; /* Prevents shrinking in a flex container */
+    border-radius: 52px; /* Rounded corners */
+    border: 5px solid #3EE090; /* Green border */
+}
+
+
+/* Room  Text Styling */
+.room-header {
+    position: relative;
+    width: 550px;
+    height: 150px;
+    top: -890px;
+    left: 720px;
+    /*border: 5px dotted blue;  */
+    
+}
+
+.room-header h2 {
+    width: 650px;
+    flex-shrink: 0;
+
+    font-size: 60px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+
+    background: linear-gradient(180deg, #33E28C 19%, #4F94D9 82%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.room-header h7 {
+    width: 300px;
+    height: 21px;
+    flex-shrink: 0;
+    color: #444B43;
+    font-family: Arial;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.room-description {
+    position: relative;
+    width: 588px;
+    top: -320px;
+    left: 70px;
+    flex-shrink: 0;
+
+    color: #4E544D;
+    font-family: Arial;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    /*
+    border: 5px dotted blue;
+    */
+}
+
+/* Accomodation Section */
+.accomodation-section {
+    width: auto;
+    height: 600px;
+    background-image: url('media-files/demo-gif.gif');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    /* Flexbox for centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* border: 10px solid violet; */
+}
+
+.accomodation-title {
+    /* Flexbox ensures centering, no need for absolute positioning */
+}
+
+.accomodation-title h5 {
+    color: #F2F2F2;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0; /* Remove default margins */
+}
+
+.accomodation-title h1 {
+    width: auto; /* Responsive width */
+    height: auto; /* Responsive height */
+    color: #F2F2F2;
+    text-align: center;
+    font-family: Arial;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0; /* Remove default margins */
+}
+
+.avail-button {
+    padding: 10px 50px;
+    color: #F8F8F8;
+    border-radius: 20px;
+    border: 5px solid #F8F8F8;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px; /* Add spacing from other elements */
+}
+
+/* Cottage Section */
+.cottage-section {
+    width: auto;
+    height: 1000px;
+    justify-content: flex-end;
+    overflow: hidden;
+    /* Debug
+    border: 5px solid green; */
+}
+
+.cottage-header h2 {
+    width: 650px;
+    flex-shrink: 0;
+
+    font-size: 50px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+
+    background: linear-gradient(180deg, #33E28C 19%, #4F94D9 82%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cottage-header h7 {
+    width: 300px;
+    height: 21px;
+    flex-shrink: 0;
+
+    color: #444B43;
+    font-family: Arial;
+    font-size:21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.cottage-description p {
+    width: 588px;
+    flex-shrink: 0;
+
+    color: #4E544D;
+    font-family: Arial;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    /* Position */
+    position: relative;
+    width: 650px;
+    top: 120px;
+    left: 50px;
+    /* Debug 
+    border: 5px dotted #4E544D; */
+}
+
+/* Position of header */
+.cottage-header {
+    position: relative;
+    width: 650px;
+    height: 170px;
+    top: 140px;
+    left: 50px;
+    /* Debug
+    border: 5px dotted blue; */
+}
+
+  /* Overlaps Images */
+  .cottage-image-stack {
+    position: relative; /* Allows child elements to be positioned relatively to this container */
+    width: 50%; /* Set container width */
+    height: 600px; /* Adjust container height */
+    left: 520px;
+    bottom: 300px;
+    /* Debug
+    border: 5px solid red; */
+  }
+
+    .cottage-image-stack__item {
+        position: absolute; /* Position images relative to the container */
+        transition: 0.3s ease; /* Smooth resizing and repositioning effect */
+    }
+    
+    .cottage-image-stack__item--top {
+        top: 600px; /* Adjust vertical position */
+        left: -320px; /* Adjust horizontal position */
+        z-index: 2; /* Ensure it's on top of the bottom image */
+    }
+    
+    .cottage-image-stack__item--bottom {
+        top: 150px; /* Adjust vertical position */
+        left: 190px; /* Adjust horizontal position */
+        z-index: 1; /* Ensure it is below the top image */
+    }
+    
+    .cottage-image-stack__item--top img {
+        width: 730px;
+        height: 420px;
+        border-radius: 7%;
+    }
+
+    .cottage-image-stack__item--bottom img {
+        width: 600px;
+        height: 680px;
+        border-radius: 10%;
+    } 
+
+    .relax {
+        top: 580px; /* Adjust vertical position */
+        left: -240px; /* Adjust horizontal position */
+        z-index: 3; /* Ensure it is above all images */
+        position: absolute; /* Ensure positioning works as intended */
+        padding: 12px 75px 12px 75px;
+        background: linear-gradient(180deg, #3EE090 0%, #38D 100%);
+        text-decoration: none;
+        font-size: 30px;
+        color: #F8F8F8;
+    }
+    
+    .cottage-rectangle-bar {
+        position: absolute; /* Ensures top and left work */
+        top: 440px; /* Adjust vertical position */
+        left: 60px; /* Adjust horizontal position */
+        z-index: 0; /* Stacking order */
+        width: 637px; /* Width of the rectangle */
+        height: 510px; /* Height of the rectangle */
+        flex-shrink: 0; /* Prevents shrinking in a flex container */
+        border-radius: 52px; /* Rounded corners */
+        border: 5px solid #3EE090; /* Green border */
+    }
+
+/* Events Styling */
+.event-section {
+    width: auto;
+    height: 1000px;
+    justify-content: flex-end;
+    overflow: hidden;
+    /* Debug 
+    border: 5px solid green; */
+}
+
+.event-header h2 {
+    width: 650px;
+    flex-shrink: 0;
+
+    font-size: 76px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+
+    background: linear-gradient(180deg, #33E28C 19%, #4F94D9 82%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.event-header h7 {
+    width: 300px;
+    height: 21px;
+    flex-shrink: 0;
+
+    color: #444B43;
+    font-family: Arial;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.event-description p {
+    width: 470px;
+    flex-shrink: 0;
+
+    color: #4E544D;
+    font-family: Arial;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    /* Position */
+    position: relative;
+    width: 650px;
+    top: 220px;
+    left: 40px;
+    /* Debug 
+    border: 5px dotted #4E544D; */
+}
+
+/* Position of header */
+.event-header {
+    position: relative;
+    width: 650px;
+    height: 170px;
+    top: 100px;
+    left: 40px;
+    /* Debug
+    border: 5px dotted blue; */
+}
+
+  /* Overlaps Images */
+  .event-image-stack {
+    position: relative; /* Allows child elements to be positioned relatively to this container */
+    width: 50%; /* Set container width */
+    height: 600px; /* Adjust container height */
+    left: 820px;
+    bottom: 300px;
+    /* Debug
+    border: 5px solid red; */
+  }
+
+    .event-image-stack__item {
+        position: absolute; /* Position images relative to the container */
+        transition: 0.3s ease; /* Smooth resizing and repositioning effect */
+    }
+    
+    .event-image-stack__item--top {
+        top: 50px; /* Adjust vertical position */
+        left: -150px; /* Adjust horizontal position */
+        z-index: 2; /* Ensure it's on top of the bottom image */
+    }
+        
+    .event-image-stack__item--top img {
+        width: 630px;
+        height: 820px;
+        border-radius: 11%;
+    }
+
+.pavilion {
+    top: 200px; /* Adjust vertical position */
+    left: 440px; /* Adjust horizontal position */
+    z-index: 3; /* Ensure it is above all images */
+    position: absolute; /* Ensure positioning works as intended */
+    padding: 100px 15px 100px 15px;
+    background: linear-gradient(180deg, #3EE090 0%, #38D 100%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 30px;
+    color: #F8F8F8;
+}
+
+.event-rectangle-bar {
+    position: absolute; /* Ensures top and left work */
+    top: 300px; /* Adjust vertical position */
+    left: -200px; /* Adjust horizontal position */
+    z-index: 0; /* Stacking order */
+    width: 570px; /* Width of the rectangle */
+    height: 640px; /* Height of the rectangle */
+    flex-shrink: 0; /* Prevents shrinking in a flex container */
+    border-radius: 52px; /* Rounded corners */
+    border: 5px solid #3EE090; /* Green border */
+}
+
+.inquire-button {
+    position: relative; /* Ensures top and left work */
+    top: -300px; /* Adjust vertical position */
+    left: 210px; /* Adjust horizontal position */
+    padding: 15px 70px 15px 70px;
+    background: linear-gradient(180deg, #3EE090 0%, #38D 100%);
+    color: #F8F8F8;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* General Footer Styles */
+.footer {
+    background: linear-gradient(180deg, #3EE090 0%, #38D 100%);
+    color: #fff;
+    width: auto;
+    height: 500px;
+    font-family: Arial, sans-serif;
+    /* Debug
+    border: solid red; */
+}
+
+/* Flexbox for Horizontal Layout */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space between columns */
+    gap: 20px; /* Add gap between sections */
+    text-align: left;
+    flex-wrap: wrap; /* Ensure responsiveness for small screens */
+}
+
+.logo img {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    top: -120px;
+    left: -50px
+    /* Debug
+    border: solid red; */
+}
+
+.logo p {
+    position: relative;
+    width: 500px;
+    height: auto;
+    top: -270px;
+    left: 47px
+    /* Debug
+    border: solid red; */
+}
+
+.quick-links {
+    position: relative;
+    /* Debug
+    border: solid red; */
+    width: 210px;
+    top: -580px;
+    left: 500px
+}
+
+.contact {
+    position: relative;
+    /* Debug
+    border: solid red; */
+    width: 350px;
+    top: -814px;
+    left: 870px
+}
+
+.contact {
+    font-size: 18px;
+}
+
+.footer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f8f8f8;
+    text-transform: uppercase;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.footer ul li {
+    margin: 5px 0;
+}
+
+.footer ul li a {
+    color: #f8f8f8;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 13px;    
+    color: #f8f8f8;
+    top: -620px;
+    /* Debug
+    border: solid red; */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack sections vertically on small screens */
+        text-align: center;
+    }
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .about-us-section {
+        flex-direction: column;
+    }
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
