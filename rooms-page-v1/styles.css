@@ -1,0 +1,296 @@
+body {
+    font-family: Arial;
+}
+
+/* Nav Styling */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+nav li {
+    float: left;
+  }
+  
+nav li a {
+    display: block;
+    color: #212121;
+    text-align: center;
+    padding: 14px 42px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  nav {
+    /* background-color: #333; */
+    padding: 10px;
+  }
+
+/* Header Styling */
+header {
+  height: 500px;
+  background: linear-gradient(90deg, #33E28C 0%, #2B5A89 100%);
+  /* Debug
+  border: dotted red; */
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f8f8f8;
+}
+
+header h1 {
+  font-size: 85px;
+  height: 40vh;
+  margin-bottom: 10px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Debug
+  border: dotted orange; */
+}
+
+.heading h2 {
+  font-size: 70px;
+  font-weight: 400;
+  background: linear-gradient(90deg, #33E28C 0%, #2B5A89 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading h8 {
+  width: 499px;
+  height: 30px;
+  flex-shrink: 0;
+  color: #444B43;
+  font-family: Arial;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-top: 50px;
+
+}
+.heading p {
+  width: 700px;
+  color: #444B43;
+  font-size: 18px;
+}
+
+.heading h3 {
+  color: #778376;
+  text-align: center;
+  font-family: Arial;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+/* Room One Format Styling */
+.room-one {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  /* Debugging
+  border: dotted yellow; */
+}
+
+.room-one h2, .room-two h2 {
+  color: #444B43;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.room-one p, .room-two p {
+  color: #444B43;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  width: 529px;
+  height: auto;
+  /* Debug 
+  border: solid red; */
+}
+
+.room-one h4, .room-two h4 {
+  color: #444B43;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.room-two {
+  text-align: right;
+}
+
+.room-one strong,
+.room-two strong {
+  font-weight: lighter;
+  font-size: 40px;
+}
+
+.book-button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #3EE090 0%, #2B5A89 100%);
+  color: #f8f8f8;
+}
+
+.emhaven {
+  color: #212121;
+}
+
+a {
+  text-decoration: none;
+}
+
+.room-one img {
+  width: 40%;
+  height: auto;
+  position: static; /* Remove unnecessary positioning */
+}
+
+.room-one .right {
+  width: 40%; /* Adjust width for better alignment */
+  height: auto;
+  position: static; /* Remove unnecessary positioning */
+  /* Debug
+  border: dodgerblue;  
+  border: dotted black; */
+}
+
+/* Room Two Styling */
+.room-two {
+  display: flex;
+  flex-direction: row-reverse; /* Reverse the order of text and image */
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Optional: add spacing between text and image */
+  /* Debug
+  border: dotted blue; */
+  padding: 20px;
+}
+
+.room-two img {
+  width: 40%; /* Set image width */
+  height: auto;
+}
+
+.room-two .left {
+  width: 40%; /* Set text width to 50% */
+  height: auto;
+  padding: 20px; /* Optional: add padding around the text */
+  border: none; /* Optional: remove the border */
+}
+
+/* Footer Styling */
+/* Footer Styling */
+footer {
+  color: #f8f8f8;
+  background: linear-gradient(180deg, #3EE090 0%, #2B5A89 100%);
+  height: auto;
+  padding: 20px 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.logo {
+  float: left;
+  width: 33%;
+  text-align: left;
+  height: 300px;
+  /* border: solid red; */
+}
+
+.logo img {
+  width: auto;
+  height: 400px;
+  position: relative;
+  top: -100px; /* Adjust to match your preferred position */
+  left: 20px;
+}
+
+.logo p {
+  margin-top: 10px;
+  text-align: center;
+  position: relative;
+  top: -190px;
+}
+
+.quick-links {
+  float: left;
+  width: 33%;
+  text-align: left;
+}
+
+.quick-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quick-links li {
+  margin-bottom: 10px;
+}
+
+.quick-links li a {
+  color: #f8f8f8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.quick-links li a:hover {
+  color: #3EE090;
+}
+
+.contact {
+  float: right;
+  width: 33%;
+  text-align: left;
+}
+
+.contact h3,
+.quick-links h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  clear: both;
+  text-align: center;
+  margin-top: 20px;
+  color: #f8f8f8;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: #f8f8f8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: #3EE090;
+}
