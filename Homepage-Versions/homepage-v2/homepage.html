@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerald Resort</title>
+    <link rel="stylesheet" href="homepage-styles.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" class="close-button" onclick="closeNav()">&times;</a>
+        <a href="#homepage">Home</a>
+        <a href="#about-us">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Top Navigation Bar -->
+    <nav id="nav-bar" class="nav-bar">
+        <div class="menu-button" onclick="openNav()">
+            <div class="hamburger-menu">
+                <div></div>
+                <div></div>
+            </div>
+            <p>Menu</p>
+        </div>
+        <a href="#book" class="book-button">Book Now</a>
+    </nav>
+
+    <!-- Header with Video Background -->
+    <header id="header" class="header">
+        <div class="video-container">
+            <video class="video-bg" autoplay muted loop>
+                <source src="assets/videos/demo-video-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="header-content">
+            <h1 id="header-title">Emerald &nbsp;Resort</h1>
+            <p id="header-subtitle">Fun Adventures and Relaxation Awaits</p>
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <!-- About Us Section -->
+        <section id="about" class="about">
+
+            <div class="about-content">
+                <div id="about-title">
+                    <h2>Welcome to Emerald Resort, where comfort meets tranquility</h2>
+                </div>
+
+                <div id="about-subtitle">
+                    <p>Officially operated as EMC Mini Resort. Proudly the first resort in Porto Circle Balon Anito, Mariveles, Bataan. We’ve been setting the standard for hospitality and relaxation since day one.</p>
+                </div>
+
+            </div>
+            
+            <div class="image-stack">
+                <div class="image-stack__item image-stack__item--bottom">
+                    <img src="assets/images/demo-image-1.jpg" alt="Bottom Image">
+                </div>
+                <div class="image-stack__item image-stack__item--top">
+                    <img src="assets/images/demo-image-2.jpg" alt="Top Image">
+                </div>
+                <a href="#booking" id="about-book" class="about-book">MAKE A BOOKING</a>
+                <div class="rectangle-shape"></div>
+            </div>
+            
+
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="footer">
+        <div id="footer-container" class="footer-container">
+            <div id="quick-links" class="quick-links">
+                <ul>
+                    <li><a href="#rooms">Home</a></li>
+                    <li><a href="#dining">About Us</a></li>
+                    <li><a href="#events">Accommodation</a></li>
+                    <li><a href="#contact">Events</a></li>
+                    <li><a href="#rooms">Package</a></li>
+                    <li><a href="#dining">Amenities</a></li>
+                    <li><a href="#events">Gallery</a></li>      
+                </ul>
+            </div>
+            <hr>
+
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p><strong>Phone:</strong> +1 800 123 4567</p>
+                <p><strong>Email:</strong> emeraldresortph@gmail.com</p>
+                <p><strong>Address:</strong> Porto Circle Balon Anito, Mariveles, Bataan, Philippines</p>
+            </div>
+
+        
+        </div>
+
+        
+        <div class="copyright">
+            <p>&copy; 2024 Emerald Resort. All Rights Reserved. | Designed by <a href="developers">Developers</a></p>
+        </div>
+
+    </footer>
+
+
+    <script src="homepage-script.js" defer></script>
+</body>
+</html>
