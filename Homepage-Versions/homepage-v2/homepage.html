@@ -32,8 +32,8 @@
 
     <!-- Header with Video Background -->
     <header id="header" class="header">
-        <div class="video-container">
-            <video class="video-bg" autoplay muted loop>
+        <div class="header-video-container">
+            <video class="header-video-bg" autoplay muted loop>
                 <source src="assets/videos/demo-video-1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -52,26 +52,166 @@
                 <div id="about-title">
                     <h2>Welcome to Emerald Resort, where comfort meets tranquility</h2>
                 </div>
-
-                <div id="about-subtitle">
+                <div id="about-description">
                     <p>Officially operated as EMC Mini Resort. Proudly the first resort in Porto Circle Balon Anito, Mariveles, Bataan. We’ve been setting the standard for hospitality and relaxation since day one.</p>
                 </div>
 
             </div>
             
-            <div class="image-stack">
-                <div class="image-stack__item image-stack__item--bottom">
-                    <img src="assets/images/demo-image-1.jpg" alt="Bottom Image">
+            <div class="about-image-stack">
+                <div class="about-image-stack__item about-image-stack__item--bottom">
+                    <img src="assets/images/image-1.jpg" alt="About Bottom Image">
                 </div>
-                <div class="image-stack__item image-stack__item--top">
-                    <img src="assets/images/demo-image-2.jpg" alt="Top Image">
+                <div class="about-image-stack__item about-image-stack__item--top">
+                    <img src="assets/images/image-3.jpg" alt="About Top Image">
                 </div>
                 <a href="#booking" id="about-book" class="about-book">MAKE A BOOKING</a>
-                <div class="rectangle-shape"></div>
+                <div class="about-rectangle-shape"></div>
             </div>
+    
+        </section>
+
+         <!--Room Section-->
+        <section class="room">
+            
+            <div class="room-image-stack">
+                <div class="room-image-stack__item room-image-stack__item--bottom">
+                    <img src="assets/images/image-15.jpg" alt="Room Bottom Image">
+                </div>
+
+                <div class="room-image-stack__item room-image-stack__item--top">
+                    <img src="assets/images/image-20.jpg" alt="Room Top Image">
+                </div>
+                
+                <a href="#booking" class="room-explore">EXPLORE</a>
+                <div class="room-rectangle-shape"></div>
+            </div>
+            
+            <div class="room-content">
+                <div id="room-title">
+                    <h7>TIMELESS ROOMS</h7>
+                    <h2>YOUR HOME<br>AWAY FROM HOME</h2>
+                </div>
+
+                <div id="room-description">
+                    <p>Experience ultimate comfort with modern amenities and cozy interiors. A relaxing and convenient stay perfect for solo travelers, couples, or group getaway.</p>
+                </div>   
+            </div>
+        </section>
+
+        <!--Tour Section-->
+        <section id="tour" class="tour">
+            <div class="tour-video-container">
+                <video class="tour-video-bg" autoplay muted loop>
+                    <source src="assets/videos/demo-video-2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="tour-content">
+                <p>Exclusive Tours & Accommodations Package:</p>
+                <h3>Explore, Dream, and Unwind</h3>
+                <a href="#avail" id="avail-button" class="avail-button">AVAIL</a>
+            </div>
+            
+            <div id="icon-section" class="icon-section">
+                <div id="icon-container" class="icon-container">
+                    <div id="icon-image" class="icon-image">
+                        <img src="assets/images/tour-icons/bed-icon.png" id="bed-icon"alt="Bed Icon"/>
+                    </div>
+                    <p>3 Days and 2 Nights</p>
+                </div>
+
+                <div id="icon-container" class="icon-container">
+                    <div id="icon-image" class="icon-image">
+                        <img src="assets/images/tour-icons/meal-icon.png" id="meal-icon"alt="Meal Icon"/>
+                    </div>
+                    <div id="icon-description" class="icon-description"><p>Meals</p></div>
+                    
+                </div>
+
+                <div id="icon-container" class="icon-container">
+                    <div id="icon-image" class="icon-image">
+                        <img src="assets/images/tour-icons/wifi-icon.png" id="wifi-icon"alt="Wifi Icon"/>
+                    </div>
+                    <div id="icon-description" class="icon-description"><p>Wifi</p></div>
+                </div>
+
+                <div id="icon-container" class="icon-container">
+                    <div id="icon-image" class="icon-image">
+                        <img src="assets/images/tour-icons/boat-icon.png" id="boat-icon"alt="Boat Icon"/>
+                    </div>
+                    <div id="icon-description" class="icon-description"><p>Boat Rental</p></div>
+                </div>
+
+                <div id="icon-container" class="icon-container">
+                    <div id="icon-image" class="icon-image">
+                        <img src="assets/images/tour-icons/car-icon.png" id="car-icon"alt="Car Icon"/>
+                    </div>
+                    <div id="icon-description" class="icon-description"><p>Inland Tour</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!--Cottage Section-->
+        <section id="cottage" class="cottage">
+
+            <div class="cottage-container-left">
+                <div class="cotage-image-container-left">
+                    <img src="assets/images/image-4.jpg" alt="Cottage Image 1">
+                </div>
+                
+                <div id="cottage-description" class="cottage-description">
+                    <p>Create lasting memories together in a home away from home. Escape to our cozy cottages, perfect for families and friends.</p>
+                </div>
+                <div class="cottage-rectangle-shape"></div>
+            </div>
+
+            <div class="cottage-container-right">
+                <div id="cottage-title" class="cottage-title">
+                    <h7>COZY COTTAGE</h7>
+                    <h2>ENJOY THE FUN STAY AT YOUR COMFORT</h2>
+                </div>
+                <div class="cotage-image-container-right">
+                    <img src="assets/images/image-6.jpg" alt="Cottage Image 2">
+                    
+                </div>
+                <a href="#relax" id="relax" class="relax">RELAX</a>
+            </div>
+            
             
 
         </section>
+
+        <!-- Event Section -->
+        <section id="event" class="event">
+            <div id="event-container" class="event-container">
+                <div class="event-content">
+                    <div id="event-title">
+                        <h7>WEDDING, BIRTHDAY, AND EVENTS</h7>
+                        <h2>COME CELEBRATE WITH US IN THE PAVILION</h2>
+                    </div>
+    
+                    <div id="event-description">
+                        <p>From birthdays to big days, we’ve got you covered! Pavilion is ideal for hosting events, celebrations, corporate gatherings, government events, and official meetings. With modern facilities and a welcoming ambiance, Pavilion ensures every occasion is memorable, meeting your needs and exceeding expectations.</p>
+                    </div>
+    
+                    
+                </div>
+                <div id="inquire-button" class="inquire-button">
+                    <P>INQUIRE NOW</P>
+                </div>
+            </div>
+            
+
+            <div class="event-image-stack">
+                <div class="event-image-stack__item event-image-stack__item--top">
+                    <img src="assets/images/image-16.jpg" alt="Event Image">
+                </div>
+                <a href="#booking" id="pavilion" class="pavilion-book">CELEBRATE WITH US</a>
+                <div class="event-rectangle-shape"></div>
+            </div>
+        </section>
+        
     </main>
 
     <!-- Footer Section -->
@@ -90,23 +230,19 @@
             </div>
             <hr>
 
-            <div class="contact">
+            <div id="contact" class="contact">
                 <h3>Contact Us</h3>
-                <p><strong>Phone:</strong> +1 800 123 4567</p>
+                <p><strong>Phone:</strong> +63 944 302 2611</p>
                 <p><strong>Email:</strong> emeraldresortph@gmail.com</p>
                 <p><strong>Address:</strong> Porto Circle Balon Anito, Mariveles, Bataan, Philippines</p>
             </div>
-
-        
         </div>
 
-        
-        <div class="copyright">
+        <div id="copyright" class="copyright">
             <p>&copy; 2024 Emerald Resort. All Rights Reserved. | Designed by <a href="developers">Developers</a></p>
         </div>
 
     </footer>
-
 
     <script src="homepage-script.js" defer></script>
 </body>
