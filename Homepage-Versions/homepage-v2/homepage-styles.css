@@ -1,3 +1,4 @@
+/* Font Imports */
 @font-face {
     font-family: 'Photograph Signature';
     src: url(assets/fonts/photograph_signature-webfont.woff2) format('woff2'),
@@ -14,6 +15,7 @@
     font-weight: 300;
 }
 
+
 /* General Reset */
 * {
     margin: 0;
@@ -25,6 +27,7 @@ html, body {
     font-family: "Futura", sans-serif;
     line-height: 1.5;
 }
+
 
 /* Sidebar Navigation */
     .sidenav {
@@ -59,6 +62,7 @@ html, body {
         right: 5px;
         font-size: 22px;
     }
+
 
 /* Top Navigation Bar */
     .nav-bar {
@@ -95,7 +99,6 @@ html, body {
         align-content: center;
         gap: 17px;
         margin: 22px 0px 20px 60px;
-
     }
 
     .menu-button p {
@@ -109,6 +112,7 @@ html, body {
         padding: 8px 40px;
         margin: 22px 60px 20px 0px;
     }
+
 
 /* Header with Video Background */
     .header {
@@ -134,6 +138,7 @@ html, body {
         height: 100%;
         object-fit: cover;
     }
+
 
 /* Header Content */
     .header-content {
@@ -185,7 +190,6 @@ html, body {
 }
 
 
-
 /* About Styling */
     .about {
         display: flex;
@@ -199,43 +203,42 @@ html, body {
         margin: 70px 0px 0px 70px;        
     }
 
-  /* About Book Button*/
-  .about-book {
-    top: 5%; /* Position relative to parent */
-    right: 15%; /* Shift right */
-    z-index: 2; /* Above images */
-    position: absolute;
-    padding: 63px 10px;
-    background: #71c9ff;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    text-decoration: none;
-    font-weight: normal;
-    font-size: 20px; /* Adjust for smaller screens */
-    color: #F8F8F8;
-    border-radius: 4px;
+    /* About Book Button*/
+    .about-book {
+        top: 5%; /* Position relative to parent */
+        right: 15%; /* Shift right */
+        z-index: 2; /* Above images */
+        position: absolute;
+        padding: 63px 10px;
+        background: #71c9ff;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 20px; /* Adjust for smaller screens */
+        color: #F8F8F8;
+        border-radius: 4px;
 
-  }
+    }
   
-  /* Rectangle Shape */
-  .about-rectangle-shape {
-    top: 10%; /* Position relative to parent height */
-    left: 20%; /* Shift right by percentage */
-    width: 68%; /* Responsive width */
-    height: 450px;
-    border: 3px solid #3EE090;
-    margin: 0px;
-    overflow: hidden;
-    position: absolute;
-    z-index: 0;
-    border-radius: 4px;
+    /* Rectangle Shape */
+    .about-rectangle-shape {
+        top: 10%; /* Position relative to parent height */
+        left: 20%; /* Shift right by percentage */
+        width: 68%; /* Responsive width */
+        height: 450px;
+        border: 3px solid #3EE090;
+        margin: 0px;
+        overflow: hidden;
+        position: absolute;
+        z-index: 0;
+        border-radius: 4px;
+    }
 
-  }
+    .about-book:hover {
+        background: #5de9c6;
 
-  .about-book:hover {
-    background: #5de9c6;
-
-  }
+    }
 
 /* Overlaps Images */
 .about-image-stack {
@@ -250,7 +253,7 @@ html, body {
     position: absolute;
     transition: 0.3s ease;
   }
-  
+
     /* Top Image Container */
     .about-image-stack__item--top {
         top: -17%; 
@@ -284,6 +287,7 @@ html, body {
         object-fit: cover;
     }
 
+
 /* Room Styling */
 .room {
     display: flex;
@@ -298,40 +302,36 @@ html, body {
 
 }
 /* Overlaps Images */
-
-.room-image-stack {
-    position: relative;
-    width: 100%; 
-    max-width: 690px; 
-    height: auto; 
-    margin: 0; 
-  }
+    .room-image-stack {
+        position: relative;
+        width: 100%; 
+        max-width: 690px; 
+        height: auto; 
+        margin: 0; 
+    }
   
-  .room-image-stack__item {
-    position: absolute;
-    transition: 0.3s ease;
-  }
+    .room-image-stack__item {
+        position: absolute;
+        transition: 0.3s ease;
+    }
 
-  .room-explore {
-    top: 2.7%; 
-    left: 28.5%; 
-    z-index: 2; 
-    position: absolute;
-    padding: 10px 77px;
-    background: #71c9ff;
-    text-decoration: none;
-    font-weight: normal;
-    font-size: 20px; /* Adjust for smaller screens */
-    color: #F8F8F8;
-    border-radius: 4px;
+    .room-explore {
+        top: 2.7%; 
+        left: 28.5%; 
+        z-index: 2; 
+        position: absolute;
+        padding: 10px 77px;
+        background: #71c9ff;
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 20px; /* Adjust for smaller screens */
+        color: #F8F8F8;
+        border-radius: 4px;
+    }
 
-
-
-  }
-
-  .room-explore:hover {
-    background: #5de9c6;
-  }
+    .room-explore:hover {
+        background: #5de9c6;
+    }
   
     /* Top Image Container */
     .room-image-stack__item--top {
@@ -378,7 +378,6 @@ html, body {
     position: absolute;
     z-index: 0;
     border-radius: 4px;
-
   }
 
 
@@ -407,6 +406,7 @@ html, body {
         object-fit: cover;
     }
 
+
 /* Tour Content */
     .tour-content {
         display: flex;
@@ -415,7 +415,6 @@ html, body {
         justify-content: center;
         text-align: center;
         margin: 70px 0px 0px 0px;
-     
     }
 
     .tour-content h3 {
@@ -436,6 +435,8 @@ html, body {
         margin-top: 20px;
     }
 
+
+/* Icon Styling */
 .icon-section {
     width: 100%;
     height: 200px;
@@ -688,7 +689,7 @@ html, body {
     transition: 0.3s ease;
 }
 
-/* Top Image Container */
+/* Image Container */
 .event-image-stack__item--top {
     top: 0%; 
     left: 13%; 
@@ -720,6 +721,7 @@ html, body {
         flex-wrap: wrap; /* Allow content to wrap on smaller screens */
     }
 
+    /*Contact*/
     .contact {
         margin-bottom: 20px;
         line-height: 25px;
@@ -735,6 +737,8 @@ html, body {
         font-weight: 530;
     }
 
+
+    /*Quick Links*/
     .quick-links {
         padding-top: 20px;
     }
@@ -760,6 +764,7 @@ html, body {
         color:#71c9ff
     }
     
+    /*Copyright*/
     .copyright {
         display: flex;
         justify-content: center;
@@ -778,8 +783,10 @@ html, body {
         color:#71c9ff
     }
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Side Nav */
     .sidenav {
         padding-top: 15px;
     }
@@ -787,7 +794,7 @@ html, body {
         font-size: 16px;
     }
 
-    /* About Us Styling */
+    /* About Styling */
     .about {
         display: flex;
         flex-wrap: wrap;
@@ -822,6 +829,7 @@ html, body {
         z-index: 1;
       }
 
+      /* Room Styling */
       .room {
         display: flex;
         flex-wrap: wrap;
@@ -831,7 +839,7 @@ html, body {
         width: 100%;
         margin-left: 0px;
     }
-
+        /* Room Image Container */
         .room-image-stack__item--bottom {
             top: 0%; /* Position relative to parent height */
             left: 0%; /* Shift right by percentage */
@@ -856,11 +864,13 @@ html, body {
             z-index: 1;
         }
     
+    /* Event Styling */
     .event-container h2,
     .event-content p {
         margin-left: 100px;
     }
 
+    /* Cottage Styling */
     .cottage {
         display: flex;
         flex-direction: column;
@@ -872,10 +882,10 @@ html, body {
         width: 100%;
     }
 
+    /* Footer Styling */
     .footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     }
-    
   }
