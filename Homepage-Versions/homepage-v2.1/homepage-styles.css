@@ -1,0 +1,1060 @@
+/* Font Imports */
+@font-face {
+    font-family: 'Photograph Signature';
+    src: url(assets/fonts/photograph_signature-webfont.woff2) format('woff2'),
+         url(assets/fonts/photograph_signature-webfont.woff) format('woff');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Futura", sans-serif;
+    src: url(assets/fonts/futura-condensedlight-webfont.woff2) format('woff2'),
+         url(assets/fonts/futura-condensedlight-webfont.woff) format('woff');
+    font-style: normal;
+    font-weight: 300;
+}
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Futura", sans-serif;
+    line-height: 1.5;
+}
+
+
+/* Sidebar Navigation */
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 60px;
+        z-index: 4;
+    }
+
+    .sidenav a {
+        padding: 8px 32px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #4E544D;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #71c9ff;
+    }
+
+    .sidenav .close-button {
+        position: absolute;
+        top: 15px;
+        right: 5px;
+        font-size: 22px;
+    }
+
+
+/* Top Navigation Bar */
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 9px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+        z-index: 3;
+    }
+
+    .nav-bar.scrolled {
+        background-color: #4E544D;
+        opacity: 90%;
+    }
+
+/* Hamburger Menu Div Styling */
+.hamburger-menu div {
+    width: 40px;
+    height: 2.5px;
+    background-color: #f8f8f8;
+    margin: 7px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Menu Button Container */
+.menu-button {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 17px;
+    margin: 22px 0px 20px 60px;
+    position: relative; /* Added for positioning pseudo-elements inside if needed */
+}
+
+/* Text Color Change on Hover for Menu Button */
+.menu-button p {
+    color: #f8f8f8;
+}
+
+/* Book Button Styling */
+.book-button {
+    text-decoration: none;
+    color: #f8f8f8;
+    border: 1px solid #f8f8f8;
+    padding: 8px 40px;
+    margin: 22px 60px 20px 0px;
+    position: relative; /* Added for pseudo-element positioning */
+    transition: 0.3s;
+}
+
+/* Hover Effect for Book Button */
+.book-button:hover {
+    color: #4E544D;
+}
+
+/* Pseudo-element for Book Button */
+.book-button:before {
+    content: ""; /* Creates an empty pseudo-element (no text) */
+    position: absolute; /* Position it absolutely inside the button */
+    top: 0; /* Position it at the top edge of the button */
+    left: 0; /* Position it at the left edge of the button */
+    width: 0%; /* Initially, the pseudo-element has no width, so it's invisible */
+    height: 100%; /* The pseudo-element will cover the full height of the button */
+    background: #71c9ff; /* The initial background color of the pseudo-element */
+    transition: width 0.5s ease, background 0.5s ease; /* Smooth transition for width change and background color change */
+    z-index: -1; /* Ensures the pseudo-element stays behind the text (so text is visible) */
+}
+
+/* Hover Effect for the Book Button's Pseudo-element */
+.book-button:hover:before {
+    width: 100%; /* On hover, expand the pseudo-element to cover the full width of the button */
+    background: #f8f8f8; /* Change the background color to match the text */
+}
+
+
+/* Header with Video Background */
+    .header {
+        height: calc(100vh - 40px);
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        color: #f8f8f8;
+    }
+
+    .header-video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .header-video-bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+/* Header Content */
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .header-content h1 {
+        font-family: "Photograph Signature", sans-serif;
+        font-weight: 100;
+        font-size: 100px;
+    }
+
+    .header-content p {
+        color: #f8f8f8;
+        font-size: 18px;
+    }
+
+
+/* Main Font Styling */
+.main h2 {
+    background: linear-gradient(180deg, #33E28C 19%, #4F94D9 82%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-weight: 350;
+    font-size: 57px;
+    line-height: 115%;
+ 
+    margin: 5px 0px 17px 0px;
+}
+
+.main h7 {
+    font-weight: 900;
+    color:#4E544D;
+    font-size: 14px;
+}
+
+.main p {
+    color:#4E544D;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+
+/* About Styling */
+    .about {
+        display: flex;
+        justify-content: space-between;
+        margin: 60px 0px 0px 0px;
+    }
+
+    .about-content  {
+        width: 40%;
+        height: 100%;
+        margin: 70px 0px 0px 70px;        
+    }
+
+ /* About Book Button */
+.about-book {
+    position: absolute;
+    top: 5%; /* Position relative to parent */
+    right: 15%; /* Shift right */
+    z-index: 2; /* Ensures the button text stays above the pseudo-element */
+    padding: 63px 10px;
+    color: #f8f8f8; /* Change text color to white when hovered */
+    background: #71c9ff; /* Initial background color */
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: color 0.5s ease; /* Smooth text color transition */
+}
+
+/* Pseudo-element used for hover effect */
+.about-book:before {
+    content: ""; /* Creates an empty pseudo-element */
+    position: absolute;
+    bottom: 100%; /* Initially places the pseudo-element below the button */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(230, 157, 191); /* Initial background color (red) */
+    transition: bottom 0.5s ease, background 0.5s ease; /* Smooth transition for position and background color */
+    z-index: -1; /* Ensures the pseudo-element is below the text */
+}
+
+/* Hover effect for the pseudo-element */
+.about-book:hover:before {
+    bottom: 0; /* Moves the pseudo-element up to cover the button */
+    background: #5de9c6; /* Changes the background color to Facebook blue */
+}
+
+  
+    /* Rectangle Shape */
+    .about-rectangle-shape {
+        top: 10%; /* Position relative to parent height */
+        left: 20%; /* Shift right by percentage */
+        width: 68%; /* Responsive width */
+        height: 450px;
+        border: 3px solid #3EE090;
+        margin: 0px;
+        overflow: hidden;
+        position: absolute;
+        z-index: 0;
+        border-radius: 4px;
+    }
+
+
+/* Overlaps Images */
+.about-image-stack {
+    position: relative;
+    width: 100%; 
+    max-width: 690px; 
+    height: 810px; 
+    margin: 0; 
+  }
+  
+  .about-image-stack__item {
+    position: absolute;
+    transition: 0.3s ease;
+  }
+
+    /* Top Image Container */
+    .about-image-stack__item--top {
+        top: -17%; 
+        left: -20%; 
+        width: 60%; 
+        height: 420px;
+        margin: 0px;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        border-radius: 2%;
+    }
+
+    /* Bottom Image Container */
+    .about-image-stack__item--bottom {
+        top: 0%; 
+        left: 15%; 
+        width: 68%; 
+        height: 500px;
+        margin: 0px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        border-radius: 2%;        
+    }
+
+    .about-image-stack__item--top img,
+    .about-image-stack__item--bottom img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+/* Room Styling */
+.room {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.room-content {
+    width: 37.9%;
+    height: 100%;
+    margin: 70px 0px 0px 0px;        
+
+}
+/* Overlaps Images */
+    .room-image-stack {
+        position: relative;
+        width: 100%; 
+        max-width: 690px; 
+        height: auto; 
+        margin: 0; 
+    }
+  
+    .room-image-stack__item {
+        position: absolute;
+        transition: 0.3s ease;
+    }
+
+    .room-explore {
+        top: 2.7%; 
+        left: 28.5%; 
+        z-index: 2; 
+        position: absolute;
+        padding: 10px 77px;
+        background: #71c9ff;
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 20px; /* Adjust for smaller screens */
+        color: #F8F8F8;
+        border-radius: 4px;
+        overflow: hidden; /* Hide overflow to create a clean effect */
+    }
+    
+    /* Pseudo-element used for hover effect */
+    .room-explore:before {
+        content: ""; /* Creates an empty pseudo-element */
+        position: absolute;
+        top: 0; /* Initially position at the top of the button */
+        left: 0; /* Start at the left edge of the button */
+        width: 0%; /* Initially, the pseudo-element has no width */
+        height: 100%; /* Full height of the button */
+        background: rgb(230, 157, 191); /* Initial background color */
+        transition: width 0.5s ease, background 0.5s ease; /* Smooth transition for width and background */
+        z-index: -1; /* Ensures the pseudo-element is below the text */
+    }
+    
+    /* Hover effect for the pseudo-element */
+    .room-explore:hover:before {
+        width: 100%; /* Expands the pseudo-element to cover the full width of the button */
+        background: #5de9c6; /* Changes the background color when hovered */
+    }
+    
+  
+    /* Top Image Container */
+    .room-image-stack__item--top {
+        top: -9%; 
+        left: 46%; 
+        width: 85%; 
+        height: 400px;
+        margin: 0px;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        border-radius: 2%;
+    }
+
+    /* Bottom Image Container */
+    .room-image-stack__item--bottom {
+        top: 5%; 
+        left: 14%; 
+        width: 70%; 
+        height: 500px;
+        margin: 0px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        border-radius: 2%;        
+    }
+
+    .room-image-stack__item--top img, 
+    .room-image-stack__item--bottom img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+/* Rectangle Shape */
+.room-rectangle-shape {
+    top: 30%; /* Position relative to parent height */
+    left: 5%; /* Shift right by percentage */
+    width: 68%; /* Responsive width */
+    height: 430px;
+    border: 3px solid #3EE090;
+    margin: 0px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    border-radius: 4px;
+  }
+
+
+/* Tour with Video Background */
+    .tour {
+        height: calc(90vh - 100px);
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+        color: #f8f8f8;
+    }
+
+    .tour-video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .tour-video-bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+/* Tour Content */
+    .tour-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 70px 0px 0px 0px;
+    }
+
+    .tour-content h3 {
+        font-weight: 300;
+        font-size: 55px;
+    }
+
+    .tour-content p {
+        color: #f8f8f8;
+        font-size: 18px;
+    }
+
+    .avail-button {
+        text-decoration: none;
+        color: #f8f8f8;
+        border: 1px solid #f8f8f8;
+        padding: 8.78px 70px;
+        margin-top: 20px;
+        position: relative; /* Make sure the button's position is relative for the pseudo-element */
+    }
+    
+    /* Hover effect for the button */
+    .avail-button:hover {
+        color: #4E544D;
+    }
+    
+    /* The pseudo-element that will be animated */
+    .avail-button:before {
+        content: ""; /* Creates an empty pseudo-element (no text) */
+        position: absolute; /* Position it absolutely inside the button */
+        top: 0; /* Position it at the top edge of the button */
+        left: 0; /* Position it at the left edge of the button */
+        width: 0%; /* Initially, the pseudo-element has no width, so it's invisible */
+        height: 100%; /* The pseudo-element will cover the full height of the button */
+        background-color: #71c9ff; /* The initial background color of the pseudo-element */
+        transition: width 0.5s ease, background 0.5s ease; /* Smooth transition for width change and background color change */
+        z-index: -1; /* Ensures the pseudo-element stays behind the text (so text is visible) */
+    }
+    
+    /* Hover effect for the pseudo-element */
+    .avail-button:hover:before {
+        width: 100%; /* On hover, expand the pseudo-element to cover the full width of the button */
+        background-color: #f8f8f8; /* Change the background color to a new color */
+    }
+    
+
+/* Icon Styling */
+.icon-section {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.icon-container p {
+    color: #f8f8f8;
+    font-size: 13px;
+}
+
+.icon-image {
+    width: 100%; /* Take up full width of the parent container */
+    height: 70px; /* Adjust height automatically */
+}
+
+.icon-image img {
+    width: 40px; /* Set a fixed width for the icons */
+    height: 40px; /* Set a fixed height for the icons */
+    object-fit: contain; /* Maintain the aspect ratio without cropping */
+}
+
+.icon-image #car-icon {
+    width: 100px;
+    height: 70px;
+}
+
+.icon-image #bed-icon {
+    width: auto;
+    height: 65px;
+}
+
+.icon-image #meal-icon,
+.icon-image #wifi-icon,
+.icon-image #boat-icon {
+    width: auto;
+    height: 50px;
+}
+
+
+/* Cottage Container Styling */
+.cottage {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    height: auto;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Left Container (Title and Description) */
+.cottage-container-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 50%;
+    justify-content: center; /* Vertically center the content */
+    position: relative;
+}
+
+/* Right Container (Image and Additional Content) */
+.cottage-container-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Ensure button is positioned within this container */
+}
+
+/* Text Styling */
+.cottage-description {
+    width: 60%;
+    text-align: right;
+    margin: 20px 0px;
+}
+
+.cottage-title {
+    width: 79%; /* Set width to 100% for better layout */
+    text-align: left;
+    margin: 0px 0px 20px 0px;
+}
+
+/* Relax Button Styling */
+.relax {
+    background-color: #71c9ff;
+    padding: 7px 80px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: #f8f8f8;
+    font-size: 22px;
+    margin-top: 30px;
+    position: absolute;
+    top: 34%;
+    left: 21%;
+    z-index: 2;
+}
+
+/* Pseudo-element used for hover effect */
+.relax:before {
+    content: ""; /* Creates an empty pseudo-element */
+    position: absolute;
+    top: 0; /* Initially position at the top of the button */
+    left: 0; /* Start at the left edge of the button */
+    width: 0%; /* Initially, the pseudo-element has no width */
+    height: 100%; /* Full height of the button */
+    background: rgb(230, 157, 191); /* Initial background color */
+    transition: width 0.5s ease, background 0.5s ease; /* Smooth transition for width and background */
+    z-index: -1; /* Ensures the pseudo-element is below the text */
+}
+
+/* Hover effect for the pseudo-element */
+.relax:hover:before {
+    width: 100%; /* Expands the pseudo-element to cover the full width of the button */
+    background: #5de9c6; /* Changes the background color when hovered */
+}
+
+/* Rectangle Shape Styling */
+.cottage-rectangle-shape {
+    position: absolute;
+    top: -10%;
+    left: 13%;
+    width: 69%;
+    height: 300px;
+    border: 3px solid #3EE090;
+    z-index: -1;
+    border-radius: 4px;
+}
+
+/* Image Container Styling */
+.cotage-image-container-left,
+.cotage-image-container-right {
+    width: 80%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2%;
+}
+
+/* Left Image Container Styling */
+.cotage-image-container-left {
+    max-height: 540px;
+    z-index: 1;
+}
+
+/* Right Image Container Styling */
+.cotage-image-container-right {
+    max-height: 370px;
+    z-index: 2;
+}
+
+/* Image Styling */
+.cotage-image-container-left img, 
+.cotage-image-container-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Event Section Styling */
+.event {
+    display: flex;
+    flex-wrap: wrap; /* Wrap for responsiveness */
+    margin: 60px 0;
+}
+
+.event-container {
+    padding: 0px;
+    max-width: 650px;
+    height: 100%;
+}
+
+.event-content {
+    margin: 120px 0px 0px 0px;
+    text-align: right; 
+}
+
+.event-container h2 {
+    width: 80%;
+    margin-left: 133px;
+}
+
+.event-content p {
+    width: 80%;
+    margin-top: 20px;
+    line-height: 1.6;
+    margin-left: 125px;
+}
+
+/* Inquire Button Styling */
+.inquire-button {
+    display: flex;
+    justify-self: center;
+    border: 1px solid #4E544D; /* Independent border size */
+    padding: 10px 50px; /* Adjust padding for desired size */
+    color: #4E544D; /* Text color */
+    text-align: center; /* Center the text */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Make it stand out */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    margin-top: 50px;
+    margin-left: 140px;
+    position: relative; /* Added position: relative for the pseudo-element positioning */
+}
+
+.inquire-button p {
+    margin: 0; /* Remove default paragraph margins */
+}
+
+.inquire-button:hover p {
+    color: #f8f8f8; /* Change text color on hover */
+}
+
+/* The pseudo-element that will be animated */
+.inquire-button:before {
+    content: ""; /* Creates an empty pseudo-element (no text) */
+    position: absolute; /* Position it absolutely inside the button */
+    top: 0; /* Initially position it at the top edge of the button */
+    left: 0; /* Position it at the left edge of the button */
+    width: 0%; /* Initially, the pseudo-element has no width, so it's invisible */
+    height: 100%; /* The pseudo-element will cover the full height of the button */
+    background: #71c9ff; /* The initial background color of the pseudo-element */
+    transition: width 0.5s ease, background 0.5s ease; /* Smooth transition for width change and background color change */
+    z-index: -1; /* Ensures the pseudo-element stays behind the text (so text is visible) */
+}
+
+/* Hover effect for the pseudo-element */
+.inquire-button:hover:before {
+    width: 100%; /* On hover, expand the pseudo-element to cover the full width of the button */
+    background: #4E544D; /* Change the background color to a new color */
+}
+
+.pavilion-book {
+    position: absolute;
+    top: -2%;
+    right: 15%;
+    padding: 8px 85px;
+    font-size: 20px;
+    background: #71c9ff;
+    color: #F8F8F8;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 2;
+    text-align: left;
+}
+
+/* The pseudo-element that will be animated */
+.pavilion-book:before {
+    content: ""; /* Creates an empty pseudo-element (no text) */
+    position: absolute; /* Position it absolutely inside the button */
+    top: 0; /* Position it at the top edge of the button */
+    left: 0; /* Position it at the left edge of the button */
+    width: 0%; /* Initially, the pseudo-element has no width, so it's invisible */
+    height: 100%; /* The pseudo-element will cover the full height of the button */
+    background: rgb(230, 157, 191); /* The initial background color of the pseudo-element */
+    transition: width 0.5s ease, background 0.5s ease; /* Smooth transition for width change and background color change */
+    z-index: -1; /* Ensures the pseudo-element stays behind the text (so text is visible) */
+}
+
+/* Hover effect for the pseudo-element */
+.pavilion-book:hover:before {
+    width: 100%; /* On hover, expand the pseudo-element to cover the full width of the button */
+    background: #5de9c6; /* Change the background color to a new color */
+}
+
+/* Overlaps Images */
+.event-image-stack {
+    display: flex;
+    justify-self: flex-end;
+    align-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    width: 100%; 
+    max-width: 690px; 
+    height: 810px; 
+    margin: 0; 
+}
+
+.event-image-stack__item {
+    position: absolute;
+    transition: 0.3s ease;
+}
+
+/* Image Container */
+.event-image-stack__item--top {
+    top: 0%; 
+    left: 13%; 
+    width: 80%; 
+    height: 80%;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    border-radius: 2%;
+}
+
+.event-image-stack__item--top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Footer Styling */    
+    .footer {
+        padding: 10px 20px;  
+        color: #4E544D;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 30px 50px;
+        flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    }
+
+    /*Contact*/
+    .contact {
+        margin-bottom: 20px;
+        line-height: 25px;
+        font-size: 18px;
+    }
+
+    .contact h3 {
+        margin-bottom: 14px;
+    }
+    
+    .contact h3, 
+    .contact strong  {
+        font-weight: 530;
+    }
+
+
+    /*Quick Links*/
+    .quick-links {
+        padding-top: 20px;
+    }
+
+    .quick-links ul {
+        list-style-type: none;
+        padding: 0;
+        font-size: 14px;
+    }
+    
+    .quick-links li {
+        display: inline;
+    }
+        
+    .quick-links a {
+        text-decoration: none;
+        color: #4E544D;
+        transition: 0.3s;
+        margin-right: 10px;
+    }
+
+    .quick-links a:hover {
+        color:#71c9ff
+    }
+    
+    /*Copyright*/
+    .copyright {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px; 
+        font-size: 12.5px;
+    }
+    
+    .copyright a {
+        text-decoration: none;
+        color: #4E544D;
+        transition: 0.3s;
+
+    }
+
+    .copyright a:hover {
+        color:#71c9ff
+    }
+
+
+/* Fade Transition */
+/* Fade In Effect for Content */
+.fade-in-one {
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.9s ease-out;
+}
+
+/* Fade In Effect for Image */
+.fade-in-two {
+    opacity: 0; /* Initially invisible */
+    transform: translateY(50px); /* Start off-screen */
+    transition: transform 0.9s ease-out, opacity 0.9s ease-out;
+}
+
+.fade-in-three {
+    opacity: 0; /* Initially invisible */
+    transform: translateY(50px); /* Start off-screen */
+    transition: transform 0.4s ease-out, opacity 0.7s ease-out;
+}
+
+/* When elements are in view */
+.fade-in-one.visible,
+.fade-in-two.visible,
+.fade-in-three.visible {
+    transform: translateY(0);  /* Slide in */
+    opacity: 1;  /* Fade in */
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Side Nav */
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 16px;
+    }
+
+    /* About Styling */
+    .about {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .about-content {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .about-image-stack__item--bottom {
+        top: 0%; /* Position relative to parent height */
+        left: 0%; /* Shift right by percentage */
+        width: 100%; /* Responsive width */
+        height: 570px;
+        border: 3px solid #71c9ff;
+        margin: 0px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+      }
+
+      .about-image-stack__item--top {
+        top: 0%; /* Position relative to parent height */
+        left: 0%; /* Shift right by percentage */
+        width: 100%; /* Responsive width */
+        height: auto;
+        border: 3px solid #71c9ff;
+        margin: 0px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Room Styling */
+      .room {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .room-content {
+        width: 100%;
+        margin-left: 0px;
+    }
+        /* Room Image Container */
+        .room-image-stack__item--bottom {
+            top: 0%; /* Position relative to parent height */
+            left: 0%; /* Shift right by percentage */
+            width: 100%; /* Responsive width */
+            height: 570px;
+            border: 3px solid #71c9ff;
+            margin: 0px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .room-image-stack__item--top {
+            top: 0%; /* Position relative to parent height */
+            left: 0%; /* Shift right by percentage */
+            width: 100%; /* Responsive width */
+            height: auto;
+            border: 3px solid #71c9ff;
+            margin: 0px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+    
+    /* Event Styling */
+    .event-container h2,
+    .event-content p {
+        margin-left: 100px;
+    }
+
+    /* Cottage Styling */
+    .cottage {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .cottage-container-left,
+    .cotage-image-container-right {
+        width: 100%;
+    }
+
+    /* Footer Styling */
+    .footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    }
+  }
