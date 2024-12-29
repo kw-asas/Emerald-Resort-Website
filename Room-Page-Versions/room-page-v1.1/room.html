@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerald Resort</title>
+    <link rel="stylesheet" href="room-styles.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div id="sidenav" class="sidenav">
+        <a href="javascript:void(0)" class="close-button" onclick="closeNav()">&times;</a>
+        <a href="#homepage">Home</a>
+        <a href="#about-us">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#packages">Packages</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Top Navigation Bar -->
+    <nav id="nav-bar" class="nav-bar">
+        <div class="menu-button" onclick="openNav()">
+            <div class="hamburger-menu">
+                <div></div>
+                <div></div>
+            </div>
+            <p>Menu</p>
+        </div>
+        <a href="#book" class="book-button">Book Now</a>
+    </nav>
+
+    <!-- Header with Video Background -->
+    <header id="header" class="header">
+        <div class="header-video-container">
+            <video class="header-video-bg" autoplay muted loop>
+                <source src="assets/videos/demo-video-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="header-content">
+            <h1 id="header-title">Emerald &nbsp;Resort</h1>
+            <p id="header-subtitle">Fun Adventures and Relaxation Awaits</p>
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <!--Main Header-->
+        <header id="room-header" class="room-header">
+            <h7>Ultimate Packages for a Relaxing Stay</h7>
+            <h2>COMFORTABLE ROOMS</h2>
+            <P>Explore our variety of room options designed for ultimate comfort and relaxation. Whether you're looking for a peaceful retreat or a cozy space to unwind, our packages cater to all your needs for a restful stay.</P>
+        </header>
+        <!--Subheader-->
+        <header id="room-subheader" class="room-subheader">
+            <h3>Choose from a Variety of Comfortable Rooms</h3>
+        </header>
+
+        <!--Room Showcase-->
+        <!--Sapphire Section-->
+        <section id="sapphire-section" class="flex-layout-one">
+            <!--Carousel Container-->
+            <section class="carousel fade-in-one">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <img src="assets/images/image-1.jpg" alt="Image 1">
+                        <img src="assets/images/image-2.jpg" alt="Image 2">
+                        <img src="assets/images/image-3.jpg" alt="Image 3">
+                        <img src="assets/images/image-4.jpg" alt="Image 4">
+                        <img src="assets/images/image-5.jpg" alt="Image 5">
+                        <img src="assets/images/image-6.jpg" alt="Image 6">
+                        <img src="assets/images/image-7.jpg" alt="Image 7">
+                        <img src="assets/images/image-8.jpg" alt="Image 8">
+                        <img src="assets/images/image-9.jpg" alt="Image 9">
+                    </div>
+                </div>
+            </section>
+            <!--Sapphire Content-->
+            <header id="sapphire-content" class="content-layout face-in-one">
+                <h4 id="sapphire-room">Sapphire</h4>
+                <p id="sapphire-description">Spacious enough for up to 8 guests, this room features a king-size bed, a queen-size bed, two double-deck beds, and a well-appointed bathroom.</p>
+            </br>
+                <p id="sapphire-price">For <strong class="price">₱ 3,000</strong> Per Night</p>
+                
+            </header>
+            
+        </section>
+
+        <!--Diamond Section-->
+        <section id="diamond-section" class="flex-layout-two">
+            <!--Carousel Container-->
+            <section class="carousel fade-in-one">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <img src="assets/images/image-1.jpg" alt="Image 1">
+                        <img src="assets/images/image-2.jpg" alt="Image 2">
+                        <img src="assets/images/image-3.jpg" alt="Image 3">
+                        <img src="assets/images/image-4.jpg" alt="Image 4">
+                        <img src="assets/images/image-5.jpg" alt="Image 5">
+                        <img src="assets/images/image-6.jpg" alt="Image 6">
+                        <img src="assets/images/image-7.jpg" alt="Image 7">
+                        <img src="assets/images/image-8.jpg" alt="Image 8">
+                        <img src="assets/images/image-9.jpg" alt="Image 9">
+                    </div>
+                </div>
+            </section>
+
+            <!--Diamond Content-->
+            <header id="diamond-content" class="content-layout fade-in-two">
+                <h4 id="diamond-room">Diamond</h4>
+                <p id="diamond-description">Diamond package accommodates 8 people, featuring 2 double bedrooms and 2 king-size bedrooms</p>
+            </br>
+                <p id="diamond-price">For <strong class="price">₱ 5,000</strong> Per Night</p>
+                
+            </header>
+            
+        </section>
+        <!--Duplicate and modify the content here-->
+        
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="footer" class="footer">
+        <div id="footer-container" class="footer-container">
+            <!--Links-->
+            <div id="quick-links" class="quick-links">
+                <ul>
+                    <li><a href="#rooms">Home</a></li>
+                    <li><a href="#dining">About Us</a></li>
+                    <li><a href="#events">Accommodation</a></li>
+                    <li><a href="#contact">Events</a></li>
+                    <li><a href="#rooms">Package</a></li>
+                    <li><a href="#dining">Amenities</a></li>
+                    <li><a href="#events">Gallery</a></li>      
+                </ul>
+            </div>
+            <hr>
+            <!--Contact-->
+            <div id="contact" class="contact">
+                <h3>Contact Us</h3>
+                <p><strong>Phone:</strong> +63 944 302 2611</p>
+                <p><strong>Email:</strong> emeraldresortph@gmail.com</p>
+                <p><strong>Address:</strong> Porto Circle Balon Anito, Mariveles, Bataan, Philippines</p>
+            </div>
+        </div>
+        <!--Copyright-->
+        <div id="copyright" class="copyright">
+            <p>&copy; 2024 Emerald Resort. All Rights Reserved. | Designed by <a href="developers">Developers</a></p>
+        </div>
+    </footer>
+    <!--Javascript-->
+    <script src="room-script.js" defer></script>
+</body>
+</html>
