@@ -109,7 +109,7 @@ html, body {
     color: #f8f8f8;
 }
 
-/* Book Button Styling */
+/* Navigation Book Button Styling */
 .book-button {
     text-decoration: none;
     color: #f8f8f8;
@@ -195,6 +195,9 @@ html, body {
 
 
 /* Main Font Styling */
+.main {
+    margin: 0 70px;
+}
 .main h2 {
     background: linear-gradient(180deg, #33E28C 19%, #4F94D9 82%);
     background-clip: text;
@@ -202,7 +205,7 @@ html, body {
     -webkit-text-fill-color: transparent;
 
     font-weight: 350;
-    font-size: 57px;
+    font-size: 70px;
     line-height: 115%;
  
     margin: 5px 0px 17px 0px;
@@ -223,7 +226,8 @@ html, body {
 .main h7 {
     font-weight: 900;
     color:#4E544D;
-    font-size: 14px;
+    font-size: 17px;
+    margin-bottom: 10px;
 }
 
 .main p {
@@ -235,6 +239,7 @@ html, body {
 .price {
     font-size: 34px;
     font-weight: 500;
+    color: #71c9ff;
 }
 
 /* Room Header Styling */
@@ -244,7 +249,8 @@ html, body {
     align-items: center;
     justify-self: center;
     text-align: center;
-    max-width: 620px;
+    max-width: 770px;
+    margin-top: 70px;
     width: 100%;
 }
 
@@ -255,6 +261,7 @@ html, body {
     justify-self: center;
     text-align: center;
     max-width: 100%;
+    margin-top: 30px;
 }
 
 /* Carousel Container */
@@ -270,7 +277,7 @@ html, body {
     overflow: hidden;
     max-width: 540px;
     width: 100%;
-    height: 390px;
+    height: 410px;
     margin: 0 auto;
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -281,18 +288,94 @@ html, body {
     transition: transform 0.5s ease-in-out;
 }
 
+
+/* ROOM BOOK BUTTON */
+/* Room Book One */
+.room-book-one {
+    text-decoration: none;
+    color: #4E544D;
+    border: 1px solid #4E544D;
+    padding: 8px 40px;
+    margin: 22px 60px 20px 0px;
+    width: 178px;
+    position: relative; /* Added for pseudo-element positioning */
+    transition: 0.3s;
+}
+
+/* Hover Effect for Book Button */
+.room-book-one:hover {
+    color: #4E544D;
+}
+
+/* Pseudo-element for Book Button */
+.room-book-one:before {
+    content: ""; /* Creates an empty pseudo-element (no text) */
+    position: absolute; /* Position it absolutely inside the button */
+    top: 0; /* Position it at the top edge of the button */
+    left: 0; /* Position it at the left edge of the button */
+    width: 0%; /* Initially, the pseudo-element has no width, so it's invisible */
+    height: 100%; /* The pseudo-element will cover the full height of the button */
+    background: #71c9ff; /* The initial background color of the pseudo-element */
+    transition: width 0.5s ease, background 0.5s ease; /* Smooth transition for width change and background color change */
+    z-index: -1; /* Ensures the pseudo-element stays behind the text (so text is visible) */
+}
+
+/* Hover Effect for the Book Button's Pseudo-element */
+.room-book-one:hover:before {
+    width: 100%; /* On hover, expand the pseudo-element to cover the full width of the button */
+    background: #f8f8f8; /* Change the background color to match the text */
+}
+
+/* Room Book Two */
+.room-book-two {
+    text-decoration: none;
+    color: #4E544D;
+    border: 1px solid #4E544D;
+    padding: 8px 40px;
+    margin: 22px 0px 20px 275px;
+    width: 178px;
+    position: relative; /* Added for pseudo-element positioning */
+    transition: 0.3s;
+}
+
+/* Hover Effect for Book Button */
+.room-book-two:hover {
+    color: #4E544D;
+}
+
+/* Pseudo-element for Book Button */
+.room-book-two:before {
+    content: ""; /* Creates an empty pseudo-element (no text) */
+    position: absolute; /* Position it absolutely inside the button */
+    top: 0; /* Position it at the top edge of the button */
+    left: 0; /* Position it at the left edge of the button */
+    width: 0%; /* Initially, the pseudo-element has no width, so it's invisible */
+    height: 100%; /* The pseudo-element will cover the full height of the button */
+    background: #71c9ff; /* The initial background color of the pseudo-element */
+    transition: width 0.5s ease, background 0.5s ease; /* Smooth transition for width change and background color change */
+    z-index: -1; /* Ensures the pseudo-element stays behind the text (so text is visible) */
+}
+
+/* Hover Effect for the Book Button's Pseudo-element */
+.room-book-two:hover:before {
+    width: 100%; /* On hover, expand the pseudo-element to cover the full width of the button */
+    background: #f8f8f8; /* Change the background color to match the text */
+}
+
 /*Flex Layout */
 .flex-layout-one {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    margin-top: 40px;
 }
 
 .flex-layout-two {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+    justify-content: space-around;
     text-align: right;
+    margin-top: 40px;
 }
 
 .content-layout {
@@ -383,9 +466,9 @@ html, body {
 /* Fade Transition */
 /* Fade In Effect for Content */
 .fade-in-one {
-    transform: translateY(100%);
+    transform: translateY(40%);
     opacity: 0;
-    transition: transform 0.6s ease-out, opacity 0.9s ease-out;
+    transition: transform 0.9s ease-out, opacity 0.9s ease-out;
 }
 
 /* Fade In Effect for Image */
@@ -395,16 +478,9 @@ html, body {
     transition: transform 0.9s ease-out, opacity 0.9s ease-out;
 }
 
-.fade-in-three {
-    opacity: 0; /* Initially invisible */
-    transform: translateY(50px); /* Start off-screen */
-    transition: transform 0.4s ease-out, opacity 0.7s ease-out;
-}
-
 /* When elements are in view */
 .fade-in-one.visible,
-.fade-in-two.visible,
-.fade-in-three.visible {
+.fade-in-two.visible {
     transform: translateY(0);  /* Slide in */
     opacity: 1;  /* Fade in */
 }
@@ -426,4 +502,20 @@ html, body {
         flex-wrap: wrap;
         flex-direction: column;
     }
+
+    .flex-layout-one,
+    .flex-layout-two  {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 40px;
+        text-align: left;
+    }
+
+    .room-book-one,
+    .room-book-two {
+        margin: 15px 0;
+    }
+    
+   
   }
